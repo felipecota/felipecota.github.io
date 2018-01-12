@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/assets/images/flagBR.png","40bdcbd543509c8e214ace264b43a639"],["/assets/images/flagUS.png","f68133c0b0f8055cf310e7cd57950059"],["/assets/images/launcher-icon-1x.png","5c01c0d35830a61aa2e2cfc0d7cd4a31"],["/assets/images/launcher-icon-2x.png","71623b3fb865560c541e559d9d480c53"],["/assets/images/launcher-icon-4x.png","97da38246f3e3b28f04620635f631e5b"],["/index.html","fbe75e6c265409c055d9f03d4cc36a3f"],["/inline.bbc306bdfe6e0421f46f.bundle.js","209a10026c51a5ecbae1be4cb4d4b312"],["/main.c3e1fbc75c79dbd9d420.bundle.js","493e81a02c99f26c91f4e0c2ac65b93e"],["/polyfills.db4e0c1448fd9e24ca73.bundle.js","54624d10d4a258ea16f3cc2e28614a09"],["/styles.7210212c8dbba9b3a01f.bundle.css","7210212c8dbba9b3a01fe548642fed20"]];
+var precacheConfig = [["/assets/images/flagBR.png","40bdcbd543509c8e214ace264b43a639"],["/assets/images/flagUS.png","f68133c0b0f8055cf310e7cd57950059"],["/assets/images/launcher-icon-1x.png","5c01c0d35830a61aa2e2cfc0d7cd4a31"],["/assets/images/launcher-icon-2x.png","71623b3fb865560c541e559d9d480c53"],["/assets/images/launcher-icon-4x.png","97da38246f3e3b28f04620635f631e5b"],["/index.html","a4076898fb2cf96656534bffb88f3de0"],["/inline.e5c02cf5893733775a59.bundle.js","ed89f7f02d7e64db2a77e2fb7e0a13cb"],["/main.bcc1082b3dde3d67d685.bundle.js","4b8581b94dc0ff4885e99c9291d0c4b4"],["/polyfills.4983b730fd8aea4536f3.bundle.js","276cd38775bc68bf4b53a7217c5ecfc4"],["/styles.29a634a822837429266e.bundle.css","29a634a822837429266e0af51017903c"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
