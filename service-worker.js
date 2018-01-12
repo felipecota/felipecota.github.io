@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/index.html","0521c6f4f69ca24dfb4eef3d887e6b4b"],["/inline.b0c3c2134601e6dead51.bundle.js","a24e98a813bc7c192161579fdaf8208b"],["/main.002976660da7a61a3dbf.bundle.js","3fe40ae573d487fbbcedcf10a35d17ff"],["/polyfills.c9f98f743d876dc6262b.bundle.js","3d6713547e2fdb899b41a9b343e842ea"],["/styles.d41d8cd98f00b204e980.bundle.css","d41d8cd98f00b204e9800998ecf8427e"]];
+var precacheConfig = [["/assets/images/flagBR.png","40bdcbd543509c8e214ace264b43a639"],["/assets/images/flagUS.png","f68133c0b0f8055cf310e7cd57950059"],["/assets/images/launcher-icon-1x.png","5c01c0d35830a61aa2e2cfc0d7cd4a31"],["/assets/images/launcher-icon-2x.png","71623b3fb865560c541e559d9d480c53"],["/assets/images/launcher-icon-4x.png","97da38246f3e3b28f04620635f631e5b"],["/index.html","dce69764e5ee96e99e799e08c7641b91"],["/inline.9b3c510270b7a610706e.bundle.js","57a33e85125750334e3ddeb31a3683e2"],["/main.87c7b220fd72f0d23b19.bundle.js","f14aff99460f067087c6c6516c272dfb"],["/polyfills.db4e0c1448fd9e24ca73.bundle.js","54624d10d4a258ea16f3cc2e28614a09"],["/styles.9c0ad738f18adc3d19ed.bundle.css","9c0ad738f18adc3d19eda6ac5f44976a"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
