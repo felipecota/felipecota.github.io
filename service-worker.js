@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/assets/css/bootstrap.min.css","8c147df9181105167fbf7aa53643d34b"],["/assets/fonts/glyphicons-halflings-regular.ttf","e18bbf611f2a2e43afc071aa2f4e1512"],["/assets/fonts/glyphicons-halflings-regular.woff","fa2772327f55d8198301fdb8bcfc8158"],["/assets/fonts/glyphicons-halflings-regular.woff2","448c34a56d699c29117adc64c43affeb"],["/assets/images/flagBR.png","40bdcbd543509c8e214ace264b43a639"],["/assets/images/flagUS.png","f68133c0b0f8055cf310e7cd57950059"],["/assets/js/bootstrap.min.js","5869c96cc8f19086aee625d670d741f9"],["/assets/js/jquery.min.js","c9f5aeeca3ad37bf2aa006139b935f0a"],["/assets/js/service-worker-registration.js","758113a661403dc042ea621ea3fab534"],["/index.html","d6ec6d89a33a8f73382dfbc9e49cc73b"],["/inline.f071de756e56dc92db18.bundle.js","47bb49214910e73078846ea1a0edff68"],["/main.97f2388d1b8984011ee5.bundle.js","9ad9e83c176d35ce21d286accadd82b0"],["/polyfills.db4e0c1448fd9e24ca73.bundle.js","54624d10d4a258ea16f3cc2e28614a09"],["/styles.29a634a822837429266e.bundle.css","29a634a822837429266e0af51017903c"]];
+var precacheConfig = [["/assets/css/bootstrap.min.css","8c147df9181105167fbf7aa53643d34b"],["/assets/fonts/glyphicons-halflings-regular.ttf","e18bbf611f2a2e43afc071aa2f4e1512"],["/assets/fonts/glyphicons-halflings-regular.woff","fa2772327f55d8198301fdb8bcfc8158"],["/assets/fonts/glyphicons-halflings-regular.woff2","448c34a56d699c29117adc64c43affeb"],["/assets/images/flagBR.png","40bdcbd543509c8e214ace264b43a639"],["/assets/images/flagUS.png","f68133c0b0f8055cf310e7cd57950059"],["/assets/js/bootstrap.min.js","5869c96cc8f19086aee625d670d741f9"],["/assets/js/jquery.min.js","c9f5aeeca3ad37bf2aa006139b935f0a"],["/assets/js/service-worker-registration.js","758113a661403dc042ea621ea3fab534"],["/index.html","e2d8ccbd80745d079a6c8b5938f93ccd"],["/main.js","d64297cdef222a53f5651b40c525d643"],["/polyfills.js","43bd7639bd2999683a58d724522db6cc"],["/runtime.js","0e2ee190e9b7c816dc6a6c4628549a51"],["/styles.js","c1f910d3c961b676c3f026721c2fc9f0"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
@@ -45,7 +45,7 @@ var ignoreUrlParametersMatching = [/^utm_/];
 
 
 
-var addDirectoryIndex = function (originalUrl, index) {
+var addDirectoryIndex = function(originalUrl, index) {
     var url = new URL(originalUrl);
     if (url.pathname.slice(-1) === '/') {
       url.pathname += index;
@@ -53,7 +53,7 @@ var addDirectoryIndex = function (originalUrl, index) {
     return url.toString();
   };
 
-var cleanResponse = function (originalResponse) {
+var cleanResponse = function(originalResponse) {
     // If this is not a redirected response, then we don't have to do anything.
     if (!originalResponse.redirected) {
       return Promise.resolve(originalResponse);
@@ -75,7 +75,7 @@ var cleanResponse = function (originalResponse) {
     });
   };
 
-var createCacheKey = function (originalUrl, paramName, paramValue,
+var createCacheKey = function(originalUrl, paramName, paramValue,
                            dontCacheBustUrlsMatching) {
     // Create a new URL object to avoid modifying originalUrl.
     var url = new URL(originalUrl);
@@ -91,7 +91,7 @@ var createCacheKey = function (originalUrl, paramName, paramValue,
     return url.toString();
   };
 
-var isPathWhitelisted = function (whitelist, absoluteUrlString) {
+var isPathWhitelisted = function(whitelist, absoluteUrlString) {
     // If the whitelist is empty, then consider all URLs to be whitelisted.
     if (whitelist.length === 0) {
       return true;
@@ -104,7 +104,7 @@ var isPathWhitelisted = function (whitelist, absoluteUrlString) {
     });
   };
 
-var stripIgnoredUrlParameters = function (originalUrl,
+var stripIgnoredUrlParameters = function(originalUrl,
     ignoreUrlParametersMatching) {
     var url = new URL(originalUrl);
     // Remove the hash; see https://github.com/GoogleChrome/sw-precache/issues/290
