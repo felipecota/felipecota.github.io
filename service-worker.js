@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/assets/css/bootstrap.min.css","8c147df9181105167fbf7aa53643d34b"],["/assets/fonts/glyphicons-halflings-regular.ttf","e18bbf611f2a2e43afc071aa2f4e1512"],["/assets/fonts/glyphicons-halflings-regular.woff","fa2772327f55d8198301fdb8bcfc8158"],["/assets/fonts/glyphicons-halflings-regular.woff2","448c34a56d699c29117adc64c43affeb"],["/assets/images/flagBR.png","40bdcbd543509c8e214ace264b43a639"],["/assets/images/flagUS.png","f68133c0b0f8055cf310e7cd57950059"],["/assets/js/bootstrap.min.js","5869c96cc8f19086aee625d670d741f9"],["/assets/js/jquery.min.js","c9f5aeeca3ad37bf2aa006139b935f0a"],["/assets/js/service-worker-registration.js","758113a661403dc042ea621ea3fab534"],["/index.html","9a26c88708eeaba33b334a024e2e5d6f"],["/main.db33b1b43d209d05c1f9.js","598a2b84d136430aae94bc9238c29e59"],["/polyfills.7ba304721abae30c1bec.js","089cc9dec2cd5a8925ff73488c768a96"],["/runtime.6afe30102d8fe7337431.js","f2c1a0d5e113c332e6bbe7887eb378b2"],["/styles.496db4aad4979697d197.css","7b346a6c5fa81d3ef562d3e11b5dc719"]];
+var precacheConfig = [["/assets/css/bootstrap.min.css","8c147df9181105167fbf7aa53643d34b"],["/assets/fonts/glyphicons-halflings-regular.ttf","e18bbf611f2a2e43afc071aa2f4e1512"],["/assets/fonts/glyphicons-halflings-regular.woff","fa2772327f55d8198301fdb8bcfc8158"],["/assets/fonts/glyphicons-halflings-regular.woff2","448c34a56d699c29117adc64c43affeb"],["/assets/images/flagBR.png","40bdcbd543509c8e214ace264b43a639"],["/assets/images/flagUS.png","f68133c0b0f8055cf310e7cd57950059"],["/assets/js/bootstrap.min.js","5869c96cc8f19086aee625d670d741f9"],["/assets/js/jquery.min.js","c9f5aeeca3ad37bf2aa006139b935f0a"],["/assets/js/service-worker-registration.js","758113a661403dc042ea621ea3fab534"],["/index.html","f7bbc8ea2fa894f3fb1f009c587e5c53"],["/main.9dfd3a2544e2ab95c888.js","32543829bf5fb4bc567cb6466b888a9a"],["/polyfills.7ba304721abae30c1bec.js","089cc9dec2cd5a8925ff73488c768a96"],["/runtime.6afe30102d8fe7337431.js","f2c1a0d5e113c332e6bbe7887eb378b2"],["/styles.496db4aad4979697d197.css","7b346a6c5fa81d3ef562d3e11b5dc719"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
@@ -45,7 +45,7 @@ var ignoreUrlParametersMatching = [/^utm_/];
 
 
 
-var addDirectoryIndex = function(originalUrl, index) {
+var addDirectoryIndex = function (originalUrl, index) {
     var url = new URL(originalUrl);
     if (url.pathname.slice(-1) === '/') {
       url.pathname += index;
@@ -53,7 +53,7 @@ var addDirectoryIndex = function(originalUrl, index) {
     return url.toString();
   };
 
-var cleanResponse = function(originalResponse) {
+var cleanResponse = function (originalResponse) {
     // If this is not a redirected response, then we don't have to do anything.
     if (!originalResponse.redirected) {
       return Promise.resolve(originalResponse);
@@ -75,7 +75,7 @@ var cleanResponse = function(originalResponse) {
     });
   };
 
-var createCacheKey = function(originalUrl, paramName, paramValue,
+var createCacheKey = function (originalUrl, paramName, paramValue,
                            dontCacheBustUrlsMatching) {
     // Create a new URL object to avoid modifying originalUrl.
     var url = new URL(originalUrl);
@@ -91,7 +91,7 @@ var createCacheKey = function(originalUrl, paramName, paramValue,
     return url.toString();
   };
 
-var isPathWhitelisted = function(whitelist, absoluteUrlString) {
+var isPathWhitelisted = function (whitelist, absoluteUrlString) {
     // If the whitelist is empty, then consider all URLs to be whitelisted.
     if (whitelist.length === 0) {
       return true;
@@ -104,7 +104,7 @@ var isPathWhitelisted = function(whitelist, absoluteUrlString) {
     });
   };
 
-var stripIgnoredUrlParameters = function(originalUrl,
+var stripIgnoredUrlParameters = function (originalUrl,
     ignoreUrlParametersMatching) {
     var url = new URL(originalUrl);
     // Remove the hash; see https://github.com/GoogleChrome/sw-precache/issues/290
