@@ -1,0 +1,118 @@
+{
+  "configVersion": 1,
+  "timestamp": 1567021694442,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main-es2015.ab9c29a20dfa823874af.js",
+        "/main-es5.47c83699b1ad43409815.js",
+        "/ngsw-worker.js",
+        "/polyfills-es2015.ace3ee0e38c56167894f.js",
+        "/polyfills-es5.5db4149b71d60182e4ac.js",
+        "/runtime-es2015.703a23e48ad83c851e49.js",
+        "/runtime-es5.465c2333d355155ec5f3.js",
+        "/styles.669b5f7adbecdb659d62.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/css/bootstrap_black.min.css",
+        "/assets/css/bootstrap_white.min.css",
+        "/assets/fonts/glyphicons-halflings-regular.ttf",
+        "/assets/fonts/glyphicons-halflings-regular.woff",
+        "/assets/fonts/glyphicons-halflings-regular.woff2",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/images/facebook.png",
+        "/assets/images/flagBR.png",
+        "/assets/images/flagFR.png",
+        "/assets/images/flagUS.png",
+        "/assets/images/github.png",
+        "/assets/images/google.png",
+        "/assets/images/logo.png",
+        "/assets/images/microsoft.png",
+        "/assets/images/twitter.png",
+        "/assets/images/yahoo.png",
+        "/assets/js/bootstrap.min.js",
+        "/assets/js/hammer.min.js",
+        "/assets/js/jquery.min.js",
+        "/assets/js/service-worker-registration.js"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/css/bootstrap_black.min.css": "94fc921d4941e32a79df8be27ba9ffc74ad6d4a8",
+    "/assets/css/bootstrap_white.min.css": "74a04c3f957ba566ae32484a433305e8783e7834",
+    "/assets/fonts/glyphicons-halflings-regular.ttf": "44bc1850f570972267b169ae18f1cb06b611ffa2",
+    "/assets/fonts/glyphicons-halflings-regular.woff": "278e49a86e634da6f2a02f3b47dd9d2a8f26210f",
+    "/assets/fonts/glyphicons-halflings-regular.woff2": "ca35b697d99cae4d1b60f2d60fcd37771987eb07",
+    "/assets/icons/icon-128x128.png": "891038fbad5d76297c8dd6a4b2bb246c1fbedc92",
+    "/assets/icons/icon-144x144.png": "324999057c8dc07cc6cb61f3f8becc37306bad78",
+    "/assets/icons/icon-152x152.png": "78f2cbe884a1a12682ff92e5ca8158e72469515d",
+    "/assets/icons/icon-192x192.png": "6ae99e4d2705c5a730bcfe8f66dae1b878bfe230",
+    "/assets/icons/icon-384x384.png": "5571ab2f4475eb020ef726889907e8a60da71c31",
+    "/assets/icons/icon-512x512.png": "935eb02931d94777b7bf3ada578337e8775da549",
+    "/assets/icons/icon-72x72.png": "04165647233ed33a17d43b1552417beabb4ce9e3",
+    "/assets/icons/icon-96x96.png": "880e3172cacccac0d95791c19a9dbc66f39bb406",
+    "/assets/images/facebook.png": "354315cdc1eb22628fefa0ba293d0c9d96113685",
+    "/assets/images/flagBR.png": "e4d9462bcda8814faf4435e5921ce18464869c9c",
+    "/assets/images/flagFR.png": "c2b536beeae560c7c5f7eb07c6c73234117d5215",
+    "/assets/images/flagUS.png": "5bc12f71e63fe2f96e1cf7113ac9a0f08b7e10f7",
+    "/assets/images/github.png": "6a24c11dd3ba4c61da8219ba4fe259d4e6947e7e",
+    "/assets/images/google.png": "b01e2659a281cc9011276cf907d7cf77ade8b8c0",
+    "/assets/images/logo.png": "935eb02931d94777b7bf3ada578337e8775da549",
+    "/assets/images/microsoft.png": "4e89fdaaf547c36a5710f3d1fe5c32d31b998666",
+    "/assets/images/twitter.png": "4e446e6f89465f3092624ca4285453c02dcce0bd",
+    "/assets/images/yahoo.png": "aa4d559e61e8f27d92e259a1e1cbbb4a22ea073b",
+    "/assets/js/bootstrap.min.js": "430a443d74830fe9be26efca431f448c1b3740f9",
+    "/assets/js/hammer.min.js": "f2de8453fccb34baf26d784afa965dbe8c0d1550",
+    "/assets/js/jquery.min.js": "1055018c28ab41087ef9ccefe411606893dabea2",
+    "/assets/js/service-worker-registration.js": "21a9063138ba2ef99b50d162a0c2772d3d763907",
+    "/favicon.ico": "db8935e9d57a5c1e796ce89907a8befc5df4cc16",
+    "/index.html": "7db02ace8bc472043772f4977da4fa0c211169d0",
+    "/main-es2015.ab9c29a20dfa823874af.js": "5c8d482912c5e5962bf53b2d1e54d0842f363812",
+    "/main-es5.47c83699b1ad43409815.js": "afd23bf597b710ab01d48b42510acca345886077",
+    "/ngsw-worker.js": "7f2e3a4bcc7a84567cd499f4d59e109baecc09ff",
+    "/polyfills-es2015.ace3ee0e38c56167894f.js": "530cbbf2924901190b6cbb36450114ce92bf8f08",
+    "/polyfills-es5.5db4149b71d60182e4ac.js": "488fe3d355667e073d4b87b6cd4a34351f63548b",
+    "/runtime-es2015.703a23e48ad83c851e49.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/runtime-es5.465c2333d355155ec5f3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/styles.669b5f7adbecdb659d62.css": "8e800b6aec4b25e313163fb77b225db5e87e396f"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
