@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1652376319052,
+  "timestamp": 1652379645813,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -24,7 +24,7 @@
     },
     {
       "name": "assets",
-      "installMode": "lazy",
+      "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
         "/assets/css/bootstrap_black.min.css",
