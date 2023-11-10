@@ -4,7 +4,10 @@
     "target": {
       "namespace": "android_app",
       "package_name": "com.firelist.android",
-      "sha256_cert_fingerprints": ["81:CF:D3:E4:FD:78:1B:2E:6B:12:01:DF:76:0C:80:A6:B9:DF:D4:A7:04:45:4B:F0:B2:1D:E6:5F:0A:19:75:AE"]
+      "sha256_cert_fingerprints": [
+        "81:CF:D3:E4:FD:78:1B:2E:6B:12:01:DF:76:0C:80:A6:B9:DF:D4:A7:04:45:4B:F0:B2:1D:E6:5F:0A:19:75:AE",
+        "FE:5A:AF:76:6A:7C:73:1B:E4:97:F5:25:35:AE:4D:F9:84:55:B2:8E:BA:12:8A:72:C2:D7:19:1B:B5:BD:1C:9E"
+      ]
     }
   }
 ]
