@@ -68,6 +68,7 @@ export function render(container, params) {
     listkey = l.id;
     localStorage.setItem('lastList', l.id);
     displayError('');
+    paint();
   }
 
   function makeKey() {
