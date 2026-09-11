@@ -36,10 +36,12 @@ async function render() {
     return;
   }
 
-  if (route.auth && !state.isSignin) {
+  if (route.auth) {
+    if (!state.isSignin) {
+      navigate('login');
+      return;
+    }
     localStorage.setItem('lastroute', '/' + base);
-    navigate('login');
-    return;
   }
 
   if (currentView?.destroy) currentView.destroy();
