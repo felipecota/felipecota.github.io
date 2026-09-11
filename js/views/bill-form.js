@@ -1,5 +1,5 @@
 import { db, doc, setDoc, deleteDoc } from '../firebase.js';
-import { watchMyDocs, emailKey } from '../data.js';
+import { watchMyDocs, normalizeAccess } from '../data.js';
 import { state, displayError } from '../state.js';
 import { t } from '../translate.js';
 import { config } from '../config.js';
@@ -67,7 +67,7 @@ export function render(container) {
     } else {
       setDoc(doc(db, 'bills', key), {
         billname: name,
-        access: { [emailKey()]: true }
+        access: { [state.user.email]: true }
       });
     }
     paint();
@@ -104,7 +104,7 @@ export function render(container) {
           const key = makeKey();
           setDoc(doc(db, 'bills', key), {
             billname,
-            access: obj.access,
+            access: normalizeAccess(obj.access),
             items: obj.items
           });
           billname = '';

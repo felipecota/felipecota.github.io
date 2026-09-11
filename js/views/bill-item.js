@@ -181,9 +181,9 @@ export function render(container, params) {
     unsubMembers = watchDoc('bills', billkey, (data) => {
       const temp = [];
       for (const key in data?.access ?? {}) {
-        let format = key.replace(/´/g, '.').split('@');
+        let format = key.split('@');
         if (format[0].length > 20) format[0] = format[0].substr(0, 7) + '...' + format[0].substr(format[0].length - 7, 7);
-        temp.push({ email: key.replace(/´/g, '.'), emailf: format[0] + '@' + format[1] });
+        temp.push({ email: key, emailf: format[0] + '@' + format[1] });
       }
       members = temp;
       paint();

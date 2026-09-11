@@ -1,5 +1,5 @@
-import { db, doc, updateDoc, deleteField, onSnapshot } from '../firebase.js';
-import { watchMyDocs, emailKey } from '../data.js';
+import { db, doc, updateDoc, deleteField, onSnapshot, FieldPath } from '../firebase.js';
+import { watchMyDocs } from '../data.js';
 import { state, displayError } from '../state.js';
 import { t } from '../translate.js';
 import { config } from '../config.js';
@@ -50,9 +50,8 @@ export function render(container) {
       </div>
     `;
 
-    container.querySelectorAll('.dropdown-menu li').forEach(el => {
-      el.addEventListener('click', () => onSelectList(lists.find(x => x.id === el.dataset.id)));
-    });
+    container.querySelectorAll('.dropdown-menu li').forEach(el =>
+      el.addEventListener('click', () => onSelectList(lists.find(x => x.id === el.dataset.id))));
     container.querySelector('#email')?.addEventListener('input', e => { email = e.target.value; });
     container.querySelector('#btn-include')?.addEventListener('click', include);
     container.querySelectorAll('.btn-remove').forEach(el =>
@@ -70,7 +69,7 @@ export function render(container) {
     unsubMembers = onSnapshot(doc(db, 'lists', listkey), snap => {
       const temp = [];
       const access = snap.data()?.access ?? {};
-      for (const key in access) temp.push({ email: key.replace(/´/g, '.') });
+      for (const key in access) temp.push({ email: key });
       members = temp;
       paint();
     });
@@ -86,7 +85,7 @@ export function render(container) {
     } else if (!email || email === '') {
       displayError(state.language.e14);
     } else {
-      updateDoc(doc(db, 'lists', listkey), { ['access.' + emailKey(email.toLowerCase())]: true });
+      updateDoc(doc(db, 'lists', listkey), new FieldPath('access', email.toLowerCase()), true);
       displayError('');
       email = '';
     }
@@ -96,7 +95,7 @@ export function render(container) {
   function onRemove(memberEmail) {
     if (members.length > 1) {
       if (confirm(state.language.m7)) {
-        updateDoc(doc(db, 'lists', listkey), { ['access.' + emailKey(memberEmail)]: deleteField() });
+        updateDoc(doc(db, 'lists', listkey), new FieldPath('access', memberEmail), deleteField());
       }
     } else {
       displayError(state.language.e10);

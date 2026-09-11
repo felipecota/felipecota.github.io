@@ -143,10 +143,10 @@ export function render(container, params) {
         displayError(state.language.m5);
       } else {
         for (const key in data.access ?? {}) {
-          if (key.replace(/´/g, '.') !== state.user.email) {
-            let format = key.replace(/´/g, '.').split('@');
+          if (key !== state.user.email) {
+            let format = key.split('@');
             if (format[0].length > 20) format[0] = format[0].substring(0, 7) + '...' + format[0].substring(format[0].length - 7, 7);
-            newMembers.push({ email: key.replace(/´/g, '.'), emailf: format[0] + '@' + format[1], value: 0 });
+            newMembers.push({ email: key, emailf: format[0] + '@' + format[1], value: 0 });
           }
         }
 

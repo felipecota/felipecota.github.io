@@ -1,10 +1,9 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js';
 import {
-  getAuth, onAuthStateChanged, signOut, deleteUser, sendEmailVerification,
-  signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup,
-  sendPasswordResetEmail, fetchSignInMethodsForEmail, linkWithCredential,
-  EmailAuthProvider, OAuthProvider
-} from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js';
+  initializeFirestore, persistentLocalCache, persistentMultipleTabManager,
+  collection, doc, setDoc, updateDoc, deleteDoc, deleteField, getDoc,
+  onSnapshot, query, where, FieldPath
+} from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js';
 import {
   initializeFirestore, persistentLocalCache, persistentMultipleTabManager,
   collection, doc, setDoc, updateDoc, deleteDoc, deleteField, getDoc,
@@ -35,5 +34,5 @@ export {
   sendPasswordResetEmail, fetchSignInMethodsForEmail, linkWithCredential,
   EmailAuthProvider, OAuthProvider,
   collection, doc, setDoc, updateDoc, deleteDoc, deleteField, getDoc,
-  onSnapshot, query, where
+  onSnapshot, query, where, FieldPath
 };

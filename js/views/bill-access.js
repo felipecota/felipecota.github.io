@@ -1,5 +1,5 @@
-import { db, doc, updateDoc, deleteField, getDoc } from '../firebase.js';
-import { watchMyDocs, emailKey, watchDoc } from '../data.js';
+import { db, doc, updateDoc, deleteField, FieldPath } from '../firebase.js';
+import { watchMyDocs, watchDoc } from '../data.js';
 import { state, displayError } from '../state.js';
 import { t } from '../translate.js';
 import { config } from '../config.js';
@@ -68,9 +68,9 @@ export function render(container) {
     unsubMembers = watchDoc('bills', billkey, (data) => {
       const temp = [];
       for (const key in data?.access ?? {}) {
-        let format = key.replace(/´/g, '.').split('@');
+        let format = key.split('@');
         if (format[0].length > 20) format[0] = format[0].substr(0, 7) + '...' + format[0].substr(format[0].length - 7, 7);
-        temp.push({ email: key.replace(/´/g, '.'), emailf: format[0] + '@' + format[1] });
+        temp.push({ email: key, emailf: format[0] + '@' + format[1] });
       }
       members = temp;
       paint();
@@ -86,7 +86,7 @@ export function render(container) {
       displayError(state.language.e14);
       navigator.vibrate?.([500]);
     } else {
-      updateDoc(doc(db, 'bills', billkey), { ['access.' + emailKey(email.toLowerCase())]: true });
+      updateDoc(doc(db, 'bills', billkey), new FieldPath('access', email.toLowerCase()), true);
       displayError('');
       email = '';
     }
@@ -94,29 +94,14 @@ export function render(container) {
   }
 
   function onRemove(memberEmail) {
-    if (members.length <= 1) {
+    if (members.length > 1) {
+      if (confirm(state.language.m7)) {
+        updateDoc(doc(db, 'bills', billkey), new FieldPath('access', memberEmail), deleteField());
+      }
+    } else {
       displayError(state.language.e10);
       paint();
-      return;
     }
-
-    getDoc(doc(db, 'bills', billkey)).then(snap => {
-      const data = snap.data();
-      let canDelete = true;
-      if (data?.items && Object.keys(data.items).length > 0) {
-        for (const key in data.items) {
-          if (data.items[key].owner === memberEmail) canDelete = false;
-        }
-      }
-
-      if (canDelete || memberEmail === state.user.email) {
-        if (confirm(state.language.m7)) {
-          updateDoc(doc(db, 'bills', billkey), { ['access.' + emailKey(memberEmail)]: deleteField() });
-        }
-      } else {
-        displayError(state.language.e7);
-      }
-    });
   }
 
   unsubBills = watchMyDocs('bills', (docs) => {
