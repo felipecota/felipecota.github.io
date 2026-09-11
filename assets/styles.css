@@ -124,3 +124,103 @@ ul.dropdown-menu li a {
 .list-form-view .btn {
     margin-right: 4px;
 }
+
+/* tela bill-detail (era bill-detail.component.css) */
+.bill-detail-view .collapse, .bill-detail-view .collapsing {
+    margin-top: 10px;
+}
+
+.bill-detail-view .btn {
+    margin-right: 4px;
+}
+
+.bill-detail-view .members thead th {
+    border: 0px;
+}
+
+.bill-detail-view .members tbody tr:not(:last-child) {
+    border-bottom: solid 1px #ddd;
+}
+
+.bill-detail-view .members tbody tr:first-child td:first-child {
+    border: 0px;
+    border-radius: 4px 0px 0px 0px;
+}
+
+.bill-detail-view .members tbody tr:first-child td:last-child {
+    border: 0px;
+    border-radius: 0px 4px 0px 0px;
+}
+
+.bill-detail-view .members tbody tr:last-child td:last-child {
+    border: 0px;
+    border-radius: 0px 0px 4px 0px;
+}
+
+.bill-detail-view .members tbody tr:last-child td:first-child {
+    border: 0px;
+    border-radius: 0px 0px 0px 4px;
+}
+
+.bill-detail-view .resumo {
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    padding: 15px;
+}
+
+.bill-detail-view .resumo tr {
+    border: 0px;
+}
+
+.bill-detail-view .resumo tbody tr:first-child {
+    border: 0px;
+}
+
+.bill-detail-view .resumo tbody tr:last-child {
+    border-top: solid 1px #ddd;
+}
+
+.bill-detail-view .resumo table {
+    margin: 0px;
+}
+
+.bill-detail-view .danger td {
+    background-color: #ff8181;
+}
+
+.bill-detail-view .success td {
+    background-color: #acf39b;
+}
+
+.bill-detail-view .resumo td {
+    border: 0px;
+}
+
+.bill-detail-view .info td {
+    background-color: #a3e4fd;
+}
+
+/* tela bill-form (era bill-form.component.css) */
+.bill-form-view .input-group-btn {
+    display: inline-block;
+    margin: 0px;
+}
+
+.bill-form-view .btn {
+    margin-right: 4px;
+}
+
+/* tela bill-item (era bill-item.component.css) */
+.bill-item-view .btn {
+    margin-right: 4px;
+}
+
+.bill-item-view select.members option {
+    line-height: 200%;
+}
+
+#error-banner {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}

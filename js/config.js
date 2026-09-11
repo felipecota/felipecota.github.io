@@ -1,5 +1,5 @@
 export const config = {
-  appVersion: "5.0.0",
+  appVersion: "5.0.1",
   limit_itens: 1000,
   limit_list: 100,
   limit_access: 50,
