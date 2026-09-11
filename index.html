@@ -5,19 +5,26 @@
   <title>Firelist</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#555555">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="assets/css/bootstrap_white.min.css">   
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>  
-  <script src="assets/js/hammer.min.js"></script>  
-  <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#1976d2">
-<link rel="stylesheet" href="styles.669b5f7adbecdb659d62.css"></head>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/bootstrap_white.min.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/hammer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>  
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
 <body>
   <div class="container" style="max-width: 600px;">
-    <app-root></app-root>
-  </div>    
+    <div id="swipe-area">
+      <div class="jumbotron text-center" id="shell-header"></div>
+      <div id="shell-tabs"></div>
+      <div id="error-banner" class="alert alert-danger" style="display:none;"></div>
+      <div id="view"></div>
+    </div>
+  </div>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
-<script src="runtime-es2015.b1b7e9163460901e652a.js" type="module"></script><script src="runtime-es5.b1b7e9163460901e652a.js" nomodule defer></script><script src="polyfills-es5.4188cb3cf1cdafe78c05.js" nomodule defer></script><script src="polyfills-es2015.f22e6915df0cafe29a14.js" type="module"></script><script src="main-es2015.454827d097ec20ea3b7e.js" type="module"></script><script src="main-es5.454827d097ec20ea3b7e.js" nomodule defer></script></body>
+  <script type="module" src="js/app.js"></script>
+</body>
 </html>

@@ -1,0 +1,126 @@
+body {
+    background-color: #fafafa;
+    font-size: 16px;
+}
+
+.nav li a {
+    padding: 10px;
+    margin: 0px;
+}
+
+.nav li a:hover {
+    background-color: transparent;
+    color: #2fa4e7;
+    border: solid 1px transparent;
+    padding: 10px;
+}
+
+ul.dropdown-menu {
+    background-color: #2fa4e7;
+}
+
+ul.dropdown-menu a:hover {
+    background-color: #7dbce0;
+    border-radius: 2px;
+}
+
+ul.dropdown-menu li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+ul.dropdown-menu li a {
+    color: #fff;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #eee;
+}
+
+.glyphicon-trash, .pointer {
+    cursor: pointer;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    background-color: #fafafa;
+}
+
+.btn {
+    font-size: 15px;
+}
+
+.form-control {
+    font-size: 15px;
+}
+
+/* shell (era app.component.css) */
+.jumbotron {
+    position: relative;
+}
+
+.icone {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 17px;
+}
+
+.home {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    top: auto;
+    font-size: 17px;
+}
+
+.title {
+    position: relative;
+    width: 90px;
+    font-size: 15px;
+    margin: 0px auto;
+}
+
+.logo {
+    width: 50px;
+    border: 0px;
+    vertical-align: bottom;
+}
+
+#swipe-area {
+    height: 100vh;
+}
+
+/* tela menu (era menu.component.css) */
+.menu-view .btn {
+    margin: 15px auto;
+    display: block;
+    width: 100%;
+}
+
+/* tela settings (era settings-form.component.css) */
+.settings-view .language {
+    text-align: center;
+}
+
+.settings-view .language img {
+    margin-left: 5px;
+}
+
+/* tela list-detail (era list-detail.component.css) */
+.list-detail-view .panel {
+    background-color: transparent;
+}
+
+.list-detail-view .glyphicon {
+    margin-left: 15px;
+}
+
+/* tela list-form (era list-form.component.css) */
+.list-form-view .input-group-btn {
+    display: inline-block;
+    margin: 0px;
+}
+
+.list-form-view .btn {
+    margin-right: 4px;
+}
