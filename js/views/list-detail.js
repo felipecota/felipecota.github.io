@@ -57,7 +57,7 @@ export function render(container) {
             ${items.map(i => `
               <li class="list-group-item">
                 <span class="glyphicon glyphicon-trash pull-right btn-delete-item" data-list="${l.id}" data-itemkey="${i.itemkey}"></span>
-                <span class="glyphicon glyphicon-edit pull-right pointer btn-edit-item" data-list="${l.id}" data-itemkey="${i.itemkey}" data-itemname="${i.itemname}" data-amount="${i.amount}"></span>
+                <span class="glyphicon glyphicon-pencil pull-right pointer btn-edit-item" data-list="${l.id}" data-itemkey="${i.itemkey}" data-itemname="${i.itemname}" data-amount="${i.amount}"></span>
                 <span class="glyphicon ${i.checked ? 'glyphicon-check' : 'glyphicon-unchecked'} pull-right pointer chk-item" data-list="${l.id}" data-itemkey="${i.itemkey}" data-checked="${i.checked}"></span>
                 <span${i.checked ? ' style="text-decoration: line-through;"' : ''}>${i.itemname} - ${i.amount}</span>
               </li>
