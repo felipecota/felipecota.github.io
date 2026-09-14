@@ -269,6 +269,12 @@ export function render(container, params) {
 
   unsubBills = watchMyDocs('bills', (docs) => {
     bills = [...docs].reverse();
+
+    if (!billselected && localStorage.getItem('lastBill')) {
+      const found = bills.find(b => b.id === localStorage.getItem('lastBill'));
+      if (found) { onSelectBill(found); return; }
+    }
+
     paint();
   });
 

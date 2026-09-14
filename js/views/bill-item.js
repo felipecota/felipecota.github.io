@@ -240,9 +240,10 @@ export function render(container, params) {
     bills = [...docs].reverse();
     len = bills.length;
 
-    if (editmode && !selectedBill && state.pendingBillItem?.billkey) {
-      const found = bills.find(b => b.id === state.pendingBillItem.billkey);
-      if (found) onSelectBill(found);
+    if (!selectedBill) {
+      const targetId = editmode ? state.pendingBillItem?.billkey : localStorage.getItem('lastBill');
+      const found = targetId && bills.find(b => b.id === targetId);
+      if (found) { onSelectBill(found); return; }
     }
 
     paint();
