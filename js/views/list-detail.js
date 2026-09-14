@@ -31,7 +31,7 @@ export function render(container) {
     container.querySelectorAll('.btn-edit-item').forEach(el =>
       el.addEventListener('click', () => onEdit(el.dataset.itemkey, el.dataset.itemname, el.dataset.amount, el.dataset.list)));
     container.querySelectorAll('.chk-item').forEach(el =>
-      el.addEventListener('change', (e) => onToggleCheck(el.dataset.list, el.dataset.itemkey, e.target.checked)));
+      el.addEventListener('click', () => onToggleCheck(el.dataset.list, el.dataset.itemkey, el.dataset.checked !== 'true')));
   }
 
   function renderPanel(l) {
@@ -58,7 +58,7 @@ export function render(container) {
               <li class="list-group-item">
                 <span class="glyphicon glyphicon-trash pull-right btn-delete-item" data-list="${l.id}" data-itemkey="${i.itemkey}"></span>
                 <span class="glyphicon glyphicon-edit pull-right pointer btn-edit-item" data-list="${l.id}" data-itemkey="${i.itemkey}" data-itemname="${i.itemname}" data-amount="${i.amount}"></span>
-                <input type="checkbox" class="chk-item" data-list="${l.id}" data-itemkey="${i.itemkey}" ${i.checked ? 'checked' : ''}>
+                <span class="glyphicon ${i.checked ? 'glyphicon-check' : 'glyphicon-unchecked'} pull-right pointer chk-item" data-list="${l.id}" data-itemkey="${i.itemkey}" data-checked="${i.checked}"></span>
                 <span${i.checked ? ' style="text-decoration: line-through;"' : ''}>${i.itemname} - ${i.amount}</span>
               </li>
             `).join('')}
