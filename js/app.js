@@ -44,3 +44,7 @@ function currentPathIsNot(path) {
 }
 
 start();
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
